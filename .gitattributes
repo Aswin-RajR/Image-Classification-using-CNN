@@ -1,3 +1,4 @@
 * .ts linguist-vendored
 * .tsx linguist-vendored
 * .css linguist-vendored
+*.py linguist-language=Python
