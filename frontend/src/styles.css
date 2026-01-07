@@ -1,0 +1,89 @@
+:root{
+  --navy:#0c1a22;
+  --teal:#10a3b6;
+  --orange:#ff8a2a;
+  --text:#e6edf3;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--navy);
+  color: var(--text);
+}
+
+.loading-root{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(16,163,182,0.15), transparent 60%),
+              radial-gradient(1100px 700px at 50% 120%, rgba(255,138,42,0.12), transparent 60%),
+              var(--navy);
+}
+
+.loading-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  padding:40px 36px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+}
+
+.logo{
+  width:110px;
+  height:140px;
+}
+
+.brand{
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tag{
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: rgba(230,237,243,0.85);
+}
+
+.spinner{
+  margin-top: 8px;
+  display:flex;
+  gap:10px;
+}
+
+.spinner span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: linear-gradient(135deg, var(--orange), #ffb566 70%);
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.spinner span:nth-child(2){
+  background: linear-gradient(135deg, var(--teal), #58d7e6 70%);
+  animation-delay: 0.15s;
+}
+
+.spinner span:nth-child(3){
+  animation-delay: 0.30s;
+}
+
+@keyframes bounce{
+  0%,80%,100%{ transform: translateY(0) scale(1); opacity:0.9 }
+  40%{ transform: translateY(-8px) scale(1.05); opacity:1 }
+}
+
+.app{
+  padding: 40px;
+}
+

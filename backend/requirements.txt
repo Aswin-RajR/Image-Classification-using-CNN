@@ -1,0 +1,6 @@
+fastapi
+shutil
+numpy
+json
+shutil
+tensorflow
